@@ -1,0 +1,9 @@
+Linux packages:
+libmysqlclient-dev
+
+Python modules:
+MySQLdb-python
+boto
+urllib2
+Image
+
