@@ -5,3 +5,4 @@ __pycache__
 *_bak
 *.zip
 *.db
+.idea
