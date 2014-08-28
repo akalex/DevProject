@@ -1,0 +1,70 @@
+I have a requirement for the development of a Python 2.7 based IT security tool that has the functionality of the scripts listed in this project description.
+
+
+You must include the functionality of the following scripts
+
+1. Basic Recon
+	Reference:
+		- http://packetstormsecurity.com/files/101799/QuickRecon-0.3.1.html
+		- http://packetstormsecurity.com/files/97184/Chaosmap-1.2.html
+
+2. Google/Bing Dork Attack Functionality
+	Reference:
+		- http://packetstormsecurity.com/files/118477/v3n0m-Scanner-0.1.html
+		- http://packetstormsecurity.com/files/121590/Bing-LFI-RFI-Scanner.html
+		- http://packetstormsecurity.com/files/111510/darkBing-SQL-Scanner-0.1.html
+
+3. DNS Bruteforce with Geo-IP lookups
+	Reference:
+		- http://packetstormsecurity.com/files/118036/DNS-2-GeoIP.html
+		- http://packetstormsecurity.com/files/117932/DNS-Brute-Force-0.2.html
+
+4. Directory Bruteforcer and AdminPage Finder
+	Reference:
+		- http://packetstormsecurity.com/files/117773/Directory-Scanner-Tool.html
+		- http://packetstormsecurity.com/files/117572/EAZY-Web-Scanner.html
+		- http://packetstormsecurity.com/files/113628/Advanced-Admin-Page-Finder.html
+		
+5. Load Balancer Detection:
+	Reference:
+		- https://github.com/jmbr/halberd
+		
+6. Web Application Firewall Detection:
+	Reference:
+		- http://code.google.com/p/waffit/
+		- http://code.google.com/p/imperva-detect/
+		
+
+
+Tool specifics - 
+ 
+The tool that you will be developing must have the functionality of all of python scripts listed above.
+
+
+Take all of the scripts' functionality and create a class for each core competency.
+
+Classes:
+- recon
+- dork
+- dnsenum
+- dir_admin
+- lb_waf
+
+
+Be sure to give credit to original scripts that you use for reference in your source code.
+
+
+Example tool usage (note doesn't have to be exact - this is just an example):
+
+python toolname.py -r <domain_name>
+		--recon <domain_name>
+					
+python toolname.py -e <domain_name>
+		--dnsenum <domain_name>
+										
+python toolname.py -l <domain_name>
+		--lbwaf <domain_name>
+
+ 
+Lastly, the script needs to be modular and allow for new functionality to be added easily.
+

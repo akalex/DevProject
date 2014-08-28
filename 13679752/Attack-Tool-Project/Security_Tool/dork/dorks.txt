@@ -1,0 +1,17 @@
+.asp?CategoryID
+.asp?ProdID
+.asp?Sku
+.asp?StyleID
+.asp?cart
+.asp?cartID
+.asp?catID
+.asp?catalogid
+.asp?categorylist
+.asp?cid
+.asp?code
+.asp?codeno
+.asp?designer
+.asp?framecode
+.asp?id
+.asp?idcategory
+.asp?idproduct

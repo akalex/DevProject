@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2">
+    <Document id="feat_1">
+        <Placemark id="feat_2">
+            <name>www.strategicsec.com</name>
+            <Point id="geom_0">
+                <coordinates>47.0,8.0,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="feat_3">
+            <name>www.strategicsec.com</name>
+            <Point id="geom_1">
+                <coordinates>37.7697,-122.3933,0.0</coordinates>
+            </Point>
+        </Placemark>
+    </Document>
+</kml>

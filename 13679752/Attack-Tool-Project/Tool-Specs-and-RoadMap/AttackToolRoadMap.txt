@@ -1,0 +1,104 @@
+###############################
+# Stage 1: Core Functionality #
+###############################
+
+1. Basic Recon
+Reference:
+- http://packetstormsecurity.com/files/101799/QuickRecon-0.3.1.html
+- http://packetstormsecurity.com/files/97184/Chaosmap-1.2.html
+
+2. Google/Bing Dork Attack Functionality
+Reference:
+- http://packetstormsecurity.com/files/118477/v3n0m-Scanner-0.1.html
+- http://packetstormsecurity.com/files/121590/Bing-LFI-RFI-Scanner.html
+- http://packetstormsecurity.com/files/111510/darkBing-SQL-Scanner-0.1.html
+
+3. DNS Bruteforce with Geo-IP lookups
+Reference:
+- http://packetstormsecurity.com/files/118036/DNS-2-GeoIP.html
+- http://packetstormsecurity.com/files/117932/DNS-Brute-Force-0.2.html
+
+4. Directory Bruteforcer and AdminPage Finder
+Reference:
+- http://packetstormsecurity.com/files/117773/Directory-Scanner-Tool.html
+- http://packetstormsecurity.com/files/117572/EAZY-Web-Scanner.html
+- http://packetstormsecurity.com/files/113628/Advanced-Admin-Page-Finder.html
+
+5. Load Balancer Detection:
+Reference:
+- https://github.com/jmbr/halberd
+
+6. Web Application Firewall Detection:
+Reference:
+- http://code.google.com/p/waffit/
+- http://code.google.com/p/imperva-detect/
+
+
+
+
+
+
+
+
+
+#################################
+# Stage 2: Attack Functionality #
+#################################
+
+1. Web Application Attack Functionality
+Reference:
+- http://code.google.com/p/fimap/
+- http://code.google.com/p/web-sorrow/
+- http://www.pentesterscripting.com/exploitation/p0wnpr0xy
+
+
+2. Network Attack Functionality
+Reference:
+- https://code.google.com/p/backtrack-scripts/source/browse/discover.sh
+- http://code.google.com/p/subterfuge/
+
+
+3. Wireless Attack Functionality
+Reference:
+- http://code.google.com/p/wifite/
+
+4. Password Cracking Functionality
+Reference:
+- http://code.google.com/p/findmyhash/
+
+
+
+
+
+
+
+###################################
+# Stage 3: Spear Phishing and MSF #
+###################################
+
+1. Spear-Phishing
+Reference:
+- http://code.google.com/p/ghost-phisher/
+- https://www.trustedsec.com/downloads/social-engineer-toolkit/
+
+2. Automating Nmap & Metasploit
+Reference:
+- http://code.google.com/p/autosploit/
+
+3. Database Attack
+Reference:
+- http://www.pentesterscripting.com/exploitation/mysql
+
+
+
+
+
+
+
+
+##################################
+# Stage 4: Network & VoIP Attack #
+##################################
+1. VoIP
+Reference:
+- http://code.google.com/p/sipvicious/
