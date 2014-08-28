@@ -81,21 +81,32 @@ class ImageParser(object):
     """
 
     def __init__(self):
-        s3key = 'AKIAIYZERMTB6Z5NPF5Q'
-        s3secret = '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'
-        bucket_name = "hrachya-test"
-        self.s3_conn = boto.connect_s3(s3key, s3secret)
-        self.bucket_obj = self.s3_conn.get_bucket(bucket_name)
         self.for_upload = []
         self.url_stats = {}
         self.tempdir = 'tmp'
         self.current_date = datetime.datetime.today().strftime("%Y-%m-%d")
         self.create_temp_dir()
         self.get_image_data()
-
+        for chunk in self.chunks(glob.glob1(self.tempdir, "*.jpg"), 50):
+            worker = Thread(target=self.create_thumbnail, args=(chunk,))
+            worker.setDaemon(True)
+            worker.start()
+        while (activeCount() > 1):
+            time.sleep(5)
+        s3key = 'AKIAIYZERMTB6Z5NPF5Q'
+        s3secret = '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'
+        bucket_name = "hrachya-test"
+        self.s3_conn = boto.connect_s3(s3key, s3secret)
+        self.bucket_obj = self.s3_conn.get_bucket(bucket_name)
+        for chunk in self.chunks(glob.glob1(self.tempdir, "*.jpg"), 100):
+            worker = Thread(target=self.aws_s3_uploader, args=(chunk,))
+            worker.setDaemon(True)
+            worker.start()
+        while (activeCount() > 1):
+            time.sleep(5)
         #self.aws_s3_uploader()
-        #self.update_record()
-        #self.cleaner()
+        self.update_record()
+        self.cleaner()
 
     def create_temp_dir(self):
         """For temporary files.
@@ -133,12 +144,6 @@ class ImageParser(object):
         img_output = db_conn.link(get_url_img_sql)
         for chunk in self.chunks(img_output, 50):
             worker = Thread(target=self.download_img, args=(chunk,))
-            worker.setDaemon(True)
-            worker.start()
-        while (activeCount() > 1):
-            time.sleep(5)
-        for chunk in self.chunks(glob.glob1(self.tempdir, "*.jpg"), 50):
-            worker = Thread(target=self.create_thumbnail, args=(chunk,))
             worker.setDaemon(True)
             worker.start()
         while (activeCount() > 1):
@@ -196,9 +201,9 @@ class ImageParser(object):
                 im.thumbnail(size)
                 im.save(os.path.join(self.tempdir, output_file), "JPEG")
                 self.for_upload.append(output_file)
-                print "OK", img
+                print "Thumbnail - OK", output_file
             except IOError, e:
-                print "ERROR", img
+                print "Thumbnail - ERROR", output_file
 
     def aws_s3_uploader(self, list_files):
         """Upload images and thumbs to Amazon S3
