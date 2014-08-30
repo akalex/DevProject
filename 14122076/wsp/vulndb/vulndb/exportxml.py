@@ -21,9 +21,10 @@ class vulnDBXML(object):
 
     '''
 
-    def __init__(self, cveID):
+    def __init__(self, cveID, target):
         
-        
+	self.target = target        
+
         self.cve_url = config.gbVariables['cve_url']
         self.redhat_oval_url = config.gbVariables['redhat_oval_url']
         self.cwe_url = config.gbVariables['cwe_url']
@@ -82,7 +83,7 @@ class vulnDBXML(object):
         # define id
         self.vulndbid = self.cveID.replace('self.cveID', 'vulnDB')
         #self.vulndbfile = self.cveID.replace('-', '_') + '.xml'
-        self.vulndbfile = 'full_report.xml'
+        self.vulndbfile = '%s_full_report.xml' % self.target
     
         # define generation time
         self.generated_on = strftime("%a, %d %b %Y %H:%M:%S", gmtime())

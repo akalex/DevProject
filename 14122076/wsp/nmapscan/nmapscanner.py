@@ -71,7 +71,7 @@ class Nmap_Vuln_Scan(object):
         """
 
         input_file = './%s.xml' % self.target
-        output_file = './full_report.xml'
+        output_file = './%s_full_report.xml' % self.target
         insert_string = ""
         pattern = re.compile("^</vulnDB>$", re.MULTILINE)
         if os.path.exists(input_file):

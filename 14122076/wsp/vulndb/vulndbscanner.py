@@ -10,6 +10,9 @@ class VulnDB_Scan(object):
 
     '''
 
+    def __init__(self, target):
+	self.target = target
+
     def engine(self):
         print "vulnDB - open source cross-linked local vulnerability database"
         # create an instance of the class vulnDBInfo
@@ -150,7 +153,7 @@ class VulnDB_Scan(object):
 
         print '[Generating XML] Invoking the exportXML() method '
         print '[New Instance] Creating new instance with cve ', cve
-        vulndb = vulnDBXML(cve)
+        vulndb = vulnDBXML(cve, self.target)
         vulndb.export()
 
 
