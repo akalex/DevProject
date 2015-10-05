@@ -39,7 +39,7 @@ def auth(link):
     print form.action
     # Authentication data
     form['username'] = 'ak_alex'
-    form['password'] = '[a|k]alex~'
+    form['password'] = ''
     br.form = form
     br.submit()
     print "Success!!!"
