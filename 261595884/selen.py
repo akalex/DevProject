@@ -24,9 +24,9 @@ driver.get("https://www.google.com/webmasters/tools/sitemap-list?hl=en&siteUrl=h
 
 
 emailid=driver.find_element_by_id("Email")
-emailid.send_keys("a.omyshev@gmail.com")
+emailid.send_keys("email@gmail.com")
 
-password = 'W2F8a11hbGV4fg=='
+password = '<password>'
 
 passw=driver.find_element_by_id("Passwd")
 passw.send_keys(base64.b64decode(password))
